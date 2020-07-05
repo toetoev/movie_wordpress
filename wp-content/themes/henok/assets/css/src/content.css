@@ -1,0 +1,275 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Imports
+	# Blocks
+	# Media
+		# Captions
+		# Galleries (Legacy)
+# Post and page content
+	# Alignments
+	# Custom block colors
+	# Custom font sizes
+# Sharing
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Imports
+--------------------------------------------------------------*/
+@import "_blocks.css";
+@import "_media.css";
+
+/*--------------------------------------------------------------
+# Post and page content
+--------------------------------------------------------------*/
+
+/* Custom rule  for sticky posts:
+.sticky {
+
+}
+*/
+
+.entry {
+	margin-bottom: 1rem;
+}
+
+.entry-meta,
+.entry-footer {
+	font-family: var(--highlight-font-family);
+	font-size: var(--font-size-menu);
+	font-weight: 600;
+}
+
+.entry-meta {
+	margin: 1em 0;
+}
+
+/* Hides the update date and time. */
+.updated:not(.published) {
+	display: none;
+}
+
+.post-thumbnail img {
+	margin: -1em auto 0 auto;
+	z-index: -1;
+	position: relative;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-content > *,
+.entry-content > *,
+.entry-summary > * {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	/* stylelint-disable */
+	max-width: var(--content-width);
+	/* stylelint-enable */
+}
+
+.page-header,
+.entry-header,
+.entry-footer,
+.page-navigation,
+.comments-area {
+	margin: 1.5em auto;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	/* stylelint-disable */
+	max-width: var(--content-width);
+	/* stylelint-enable */
+}
+
+.entry-content {
+	padding-bottom: 1em;
+}
+
+@media (--content-query) {
+
+	.page-content > *,
+	.entry-content > *,
+	.entry-summary > *,
+	.page-header,
+	.entry-header,
+	.entry-footer,
+	.post-navigation,
+	.page-navigation,
+	.comments-area {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.entry-title a {
+	text-decoration: none;
+	border-bottom: 4px double transparent;
+}
+
+.entry-title a:focus,
+.entry-title a:hover {
+	border-bottom: 4px double var(--color-theme-yellow);
+}
+
+.entry-header .category-links a {
+	background: var(--color-theme-yellow);
+	padding: .8em;
+	margin: 0 0.5em 1.5em 0;
+	font-size: var(--font-size-menu);
+	font-weight: 600;
+	line-height: 3;
+	outline-offset: -6px;
+	outline: 2px solid transparent;
+}
+
+.entry-header .category-links a:focus,
+.entry-header .category-links a:hover {
+	outline: 2px solid var(--color-theme-black);
+}
+
+.entry-content ul,
+.entry-content ol {
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	line-height: 2;
+}
+
+.entry-content ul ul,
+.entry-content ol ol {
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+}
+
+/* Align .more-link with the content. */
+.entry-content > .more-link {
+	display: block;
+}
+
+.page-links {
+	clear: both;
+	padding-top: 0.5em;
+	margin-bottom: 1.5em;
+}
+
+.entry-footer span {
+	margin-right: 1em;
+}
+
+a.read-more {
+	display: inline-block;
+	clear: both;
+	margin-top: 1.2em;
+	text-decoration: none;
+	border-bottom: 4px double transparent;
+}
+
+a.read-more:hover,
+a.read-more:focus {
+	border-bottom: 4px double var(--color-theme-black);
+}
+
+.entry-footer {
+	clear: both;
+	padding: 1.5em 1.5rem 3em;
+	border-top: 2px solid var(--color-theme-yellow);
+	line-height: 2;
+}
+
+@media (--content-query) {
+
+	.entry-footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+}
+
+/*--------------------------------------------------------------
+## Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5rem;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignwide {
+	max-width: calc(50% + var(--content-width) / 2);
+}
+
+.alignfull {
+	max-width: 100%;
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+## Custom block colors.
+--------------------------------------------------------------*/
+
+.has-theme-yellow-color,
+.has-theme-yellow-color a {
+	color: var(--color-theme-yellow);
+}
+
+.has-theme-yellow-background-color {
+	background-color: var(--color-theme-yellow);
+}
+
+/*--------------------------------------------------------------
+## Custom block font sizes.
+--------------------------------------------------------------*/
+
+.has-small-font-size {
+	/* stylelint-disable */
+	font-size: var(--font-size-small);
+	/* stylelint-enable */
+}
+
+.has-regular-font-size {
+	/* stylelint-disable */
+	font-size: var(--font-size-regular);
+	/* stylelint-enable */
+}
+
+.has-large-font-size {
+	/* stylelint-disable */
+	font-size: var(--font-size-large);
+	/* stylelint-enable */
+}
+
+.has-larger-font-size {
+	/* stylelint-disable */
+	font-size: var(--font-size-larger);
+	/* stylelint-enable */
+}
+
+/*--------------------------------------------------------------
+# Sharing
+--------------------------------------------------------------*/
+
+.sharing {
+	background: var(--color-theme-light-grey);
+	padding: 0 0.8em;
+	margin: 1.5em 0;
+	font-size: var(--font-size-menu);
+	line-height: 3;
+	font-weight: 700;
+}

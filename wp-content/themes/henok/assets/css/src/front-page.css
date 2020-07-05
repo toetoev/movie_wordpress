@@ -1,0 +1,39 @@
+/**
+ * Custom styles for the front-page.php template.
+ */
+
+@media (--wide-menu-query) {
+
+	.site {
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.site-main {
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-flow: dense;
+		grid-gap: 2rem;
+	}
+
+	.post {
+		margin-bottom: 0;
+		padding: 0 3rem;
+	}
+
+	.site-main .posts-navigation {
+		width: 100%;
+		margin-bottom: 0;
+		padding: 2rem 0 0;
+		font-weight: 600;
+	}
+
+	.site-main .pagination {
+		display: block;
+		grid-column: span 3;
+		width: 100%;
+		font-weight: 600;
+	}
+}

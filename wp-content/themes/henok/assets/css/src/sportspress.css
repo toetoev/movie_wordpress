@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+# Sportspress
+--------------------------------------------------------------*/
+
+/* Override plugin styles to improve accessibility */
+
+.widget_sportspress a,
+.sp-event-calendar a,
+.sp-section-content a,
+.sp-data-table tbody a {
+	text-decoration: underline;
+}
+
+.sp-event-calendar a:hover,
+.sp-event-calendar a:focus,
+.sp-section-content a:hover,
+.sp-section-content a:focus,
+.sp-data-table tbody a:hover,
+.sp-data-table tbody a:focus,
+.widget_sportspress a:hover,
+.widget_sportspress a:focus {
+	text-decoration: none;
+}
+
+/* Table adjustments */
+.sp-event-details thead,
+.sp-data-table thead,
+.sp-scrollable-table thead {
+	text-align: left;
+}
+
+.sp-data-table tr,
+.sp-data-table .sp-player-position {
+	line-height: 2;
+}
+
+.sp-data-table .data-name {
+	text-align: left;
+}
+
+.sp-data-table .data-number,
+.sp-data-table .data-rank {
+	width: 2em;
+}
+
+.sp-event-list .data-article a .dashicons {
+	padding-right: 1.5em;
+	text-decoration: none;
+}
+
+.sp-data-table thead .data-rank {
+	width: 3em;
+}
+
+/* Override width settings */
+@media screen and (min-width: 801px) {
+
+	.entry-content .sp-widget-align-right,
+	.entry-content .sp-widget-align-left {
+		text-align: left;
+		width: auto;
+		float: initial;
+		clear: initial;
+		box-sizing: border-box;
+		margin-bottom: 2em;
+	}
+
+	.entry-content .sp-event-blocks .sp-event-date,
+	.entry-content .sp-event-blocks .sp-event-results {
+		display: inline-block;
+		text-align: left;
+		margin: 0;
+	}
+
+	.entry-content .sp-event-blocks .sp-event-title {
+		text-align: left;
+		display: block;
+
+		margin: 10px 0;
+		clear: none;
+	}
+
+	.entry-content .sp-event-blocks td {
+		line-height: 2.5;
+		border-bottom: 2px solid var(--color-theme-yellow);
+	}
+
+
+}
